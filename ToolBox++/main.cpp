@@ -72,7 +72,8 @@ int main() {
     b.print();
     std::cout << "Norm of vector b : " << b.norm() << std::endl;
 
-    float cross2 = a.scalar(b);
+    float scalar2 = a.scalar(b);
+    std::cout << "Scalar product of a and b : " << scalar2 << std::endl;
 
     float angle2 = a.angle(b);
     std::cout << "Angle between a and b : " << angle2 * 180 / (std::numbers::pi) << std::endl; //radian to degree
