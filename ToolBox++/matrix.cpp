@@ -33,7 +33,7 @@ Matrix Matrix::operator-() const
     return result;
 }
 
-double Matrix::norm() const
+float Matrix::norm() const
 {
     double sum_of_squares = 0.0;
     for (int i = 0; i < numRows; i++) {

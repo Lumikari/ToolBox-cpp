@@ -2,6 +2,8 @@
 #include <math.h>
 #include <numbers>
 
+
+
 float& Vector::operator[](int i)
 {
     return data[i];
@@ -22,7 +24,7 @@ float Vector::norm() const
     float sum_of_square = 0.0;
     for (int i = 0; i < size; i++)
     {
-        sum_of_square += data[i] * data[i];
+        sum_of_square += std::pow(data[i], 2);
     }
     return sqrt(sum_of_square);
 }
@@ -77,7 +79,31 @@ float Vector::angle(const Vector& other) const
     
     result = up / (down[0] * down[1]);
     
-    return std::acosf(result) ;
+    if (scalar(other) > 0)
+    {
+        return - std::acosf(result) ;
+    }
+    else {
+        return std::acosf(result);
+    }
+
+}
+
+float Vector::distance(const Vector& other) const
+{
+
+    if (size != other.getSize())
+    {
+        throw std::invalid_argument("Vectors must have same size for addition");
+    }
+
+    float result = 0.0f;
+    for (int i = 0; i < size; i++)
+    {
+        result += std::pow(data[i] - other.data[i], 2);
+    }
+    result = std::sqrt(result);
+    return result;
 }
 
 Vector Vector::operator-() const

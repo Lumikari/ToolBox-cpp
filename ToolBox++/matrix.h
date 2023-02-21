@@ -27,7 +27,9 @@ public:
 
     Matrix operator-() const;
 
-    double norm() const;
+    float norm() const;
+
+    
 
     void print() const;
 

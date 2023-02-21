@@ -25,7 +25,7 @@ public:
     float scalar(const Vector& other) const; // scalar product
     Vector product(const Vector& other) const; // vectorial product
     float angle(const Vector& other) const;
-
+    float distance(const Vector& other) const;
 
     Vector operator-() const; // negative of matrix
     Vector operator+(const Vector& other) const;

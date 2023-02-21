@@ -58,16 +58,19 @@ int main() {
     float angle = v.angle(x);
     std::cout << "Angle between x and v : " << angle * 180/(std::numbers::pi) << std::endl; //radian to degree
 
+    float distance = v.distance(x);
+    std::cout << "Distance between v and x : " << distance << std::endl;
+
     Vector a(2);
-    a[0] = 1;
-    a[1] = 2;
+    a[0] = 0;
+    a[1] = 4;
     std::cout << "Size of vector x : " << a.getSize() << std::endl;
     a.print();
     std::cout << "Norm of vector x : " << a.norm() << std::endl;
 
     Vector b(2);
     b[0] = 3;
-    b[1] = 4;
+    b[1] = 0;
     std::cout << "Size of vector b : " << b.getSize() << std::endl;
     b.print();
     std::cout << "Norm of vector b : " << b.norm() << std::endl;
@@ -77,6 +80,10 @@ int main() {
 
     float angle2 = a.angle(b);
     std::cout << "Angle between a and b : " << angle2 * 180 / (std::numbers::pi) << std::endl; //radian to degree
+
+    float distance2 = a.distance(b);
+    std::cout << "Distance between v and x : " << distance2 << std::endl;
+
 
 
 
