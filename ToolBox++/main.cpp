@@ -15,12 +15,26 @@ int main() {
     A[1][1] = 5;
     A[1][2] = 6;
     A.print();
-    std::cout << "Norm of matrix A: " << A.norm() << std::endl;
-
-
     Matrix B = -A;
     std::cout << "Negative of matrix A: " << B.getNumRows() << " x " << B.getNumCols() << std::endl;
     B.print();
+
+
+    std::cout << "Norm of matrix A: " << A.norm() << std::endl;
+
+    std::cout << "Diagonal of matrix A': " << std::endl;
+    Vector diag = A.getDiagonale();
+    diag.print();
+    std::cout << "Tr(A) =  " << A.getTr() <<std::endl;
+    Matrix transpose = A.transpose();
+    std::cout << "Transpose of matrix A': " << std::endl;
+    transpose.print();
+
+    Matrix Mproduct = A * transpose;
+    std::cout << "Transpose of A * matrix A': " << std::endl;
+    Mproduct.print();
+
+
     
 
     Vector v(3);

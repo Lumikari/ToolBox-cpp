@@ -20,11 +20,15 @@ public:
 
     int getSize() const;
 
-    float norm() const;// norm of the vector
-
-    float scalar(const Vector& other) const; // scalar product
-    Vector product(const Vector& other) const; // vectorial product
+    // @brief norm of the vector
+    float norm() const;
+    //@brief scalar product
+    float scalar(const Vector& other) const; 
+    //@brief vectorial product
+    Vector product(const Vector& other) const; 
+    //@brief angle between vectors
     float angle(const Vector& other) const;
+    //@brief distance between
     float distance(const Vector& other) const;
 
     Vector operator-() const; // negative of matrix

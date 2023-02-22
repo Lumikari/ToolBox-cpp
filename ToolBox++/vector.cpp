@@ -79,12 +79,12 @@ float Vector::angle(const Vector& other) const
     
     result = up / (down[0] * down[1]);
     
-    if (scalar(other) > 0)
+    if (scalar(other) < 0)
     {
-        return - std::acosf(result) ;
+        return - std::acos(result) ;
     }
     else {
-        return std::acosf(result);
+        return std::acos(result);
     }
 
 }
